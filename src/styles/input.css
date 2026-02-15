@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-work-sans: "Work Sans", sans-serif;
+}
 
 @layer components {
   .active-ft span {
@@ -34,7 +36,11 @@
   background: linear-gradient(180deg, #5d55b2 0%, #746bd2 100%);
 }
 .whitetrans {
-background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #FFFFFF 117.86%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    #ffffff 117.86%
+  );
 }
 .shadow-ma {
   box-shadow: 4px 3px 32px rgba(204, 202, 223, 0.26);
