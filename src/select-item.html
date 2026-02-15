@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select items</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-work-sans bg-[#ffffff] relative h-screen">
+    <!-- Desktop Sidebar -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[250px] bg-white border-r border-[#F6F5FA] hidden lg:flex flex-col z-[60]">
+        <!-- Logo -->
+        <div class="h-[100px] flex items-center justify-center border-b border-[#F6F5FA]">
+            <h1 class="text-[24px] font-bold text-[#5D55B2]">StudioExcel</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 overflow-y-auto py-[20px] px-[16px] flex flex-col gap-[8px]">
+            <!-- Home -->
+            <a href="dashboard.html"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] bg-[#F6F5FA] rounded-[12px] text-[#5D55B2]">
+                <img src="./images/home.svg" alt="home" class="h-[20px] w-auto filter-purple">
+                <span class="text-[16px] font-medium">Home</span>
+            </a>
+            <!-- Winery -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/wine.svg" alt="winery"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Winery</span>
+            </a>
+            <!-- Orders -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/task.svg" alt="orders"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Orders</span>
+            </a>
+            <!-- Notes -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/notes.svg" alt="notes"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Notes</span>
+            </a>
+        </nav>
+
+        <!-- User Profile (Bottom) -->
+        <div class="p-[16px] border-t border-[#F6F5FA]">
+            <div class="flex items-center gap-[12px]">
+                <img src="https://i.pravatar.cc/100?img=1" alt="avatar" class="w-[40px] h-[40px] rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-[14px] font-semibold text-[#1F1F1F]">Alex Joy</span>
+                    <span class="text-[12px] text-[#545454]">Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- navbar (removable) -->
+    <!-- main content -->
+    <main class="">
+        <!-- top bar -->
+        <section
+            class="px-[20px] fixed top-0 pt-[26px] w-full lg:w-[calc(100%-250px)] lg:left-[250px] z-10 bg-white transition-all">
+            <!-- 1 -->
+            <div class="flex flex-row items-center justify-between">
+                <!-- left -->
+                <div class="flex flex-row items-center gap-[12px]">
+                    <button
+                        class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.77254 5.43579L3.20837 11L8.77254 16.5641" stroke="#292D32" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.7916 11H3.36414" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h2 class="text-[18px] md:text-[24px] text-[#000000] font-medium transition-all">Select Items</h2>
+                </div>
+                <!-- right -->
+                <button
+                    class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center relative">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.1667 5.95837H14.6667" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M5.49992 5.95837H1.83325" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M9.16659 9.16667C10.9385 9.16667 12.3749 7.73025 12.3749 5.95833C12.3749 4.18642 10.9385 2.75 9.16659 2.75C7.39467 2.75 5.95825 4.18642 5.95825 5.95833C5.95825 7.73025 7.39467 9.16667 9.16659 9.16667Z"
+                            stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M20.1667 16.0416H16.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7.33325 16.0416H1.83325" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M12.8333 19.25C14.6052 19.25 16.0417 17.8136 16.0417 16.0417C16.0417 14.2698 14.6052 12.8334 12.8333 12.8334C11.0614 12.8334 9.625 14.2698 9.625 16.0417C9.625 17.8136 11.0614 19.25 12.8333 19.25Z"
+                            stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <div
+                        class="w-[16px] h-[16px] loginbg text-white text-[10px] font-medium flex justify-center items-center absolute top-[5px] right-[5px] rounded-full border-[1px] border-[#FFFFFF]">
+                        3</div>
+                </button>
+            </div>
+            <!-- Search -->
+            <div class="mt-[24px] relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-[16px] pointer-events-none">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.58329 17.5001C13.9555 17.5001 17.5 13.9557 17.5 9.58341C17.5 5.21116 13.9555 1.66675 9.58329 1.66675C5.21104 1.66675 1.66663 5.21116 1.66663 9.58341C1.66663 13.9557 5.21104 17.5001 9.58329 17.5001Z"
+                            stroke="#AEA9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18.3333 18.3334L16.6666 16.6667" stroke="#AEA9D9" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+                <input type="text"
+                    class="block w-full h-[50px] ps-[50px] text-[14px] text-[#111526] border border-[#E2E2E2] rounded-[30px] bg-white inputshadow outline-none placeholder:text-[#545454] placeholder:text-[14px] font-medium"
+                    placeholder="Find item" />
+            </div>
+
+            <!-- Info Header -->
+            <div class="mt-[13px]">
+                <h1 class="text-[18px] md:text-[22px] font-medium text-[#000000] transition-all">Joye Farm Winery</h1>
+                <p class="text-[14px] md:text-[16px] text-[#545454] mt-[10px] transition-all">Naramata Hospitality</p>
+            </div>
+        </section>
+
+        <!-- List -->
+        <section
+            class="pt-[237px] px-[20px] pb-[200px] overflow-y-auto no-scrollbar h-screen bg-white lg:pl-[270px] transition-all">
+            <div class="flex flex-col gap-[14px]">
+                <!-- Item 1 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Button -->
+            <div
+                class="fixed bottom-0 left-0 right-0 lg:left-[250px] pb-[110px] lg:pb-[60px] pt-[0px] whitetrans flex justify-center transition-all">
+                <button
+                    class="w-full max-w-[186px] h-[54px] loginbg rounded-[60px] text-[#FFFFFF] text-[18px] font-semibold shadow-[0px_4px_20px_rgba(93,85,178,0.4)] transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 active:scale-95">
+                    Back To Order
+                </button>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer class="absolute bottom-0 z-[99] w-full lg:hidden">
+        <div
+            class="min-h-[80px] bg-[#181C2A] rounded-t-[16px] flex flex-row items-center justify-between py-[18px] px-[30px]">
+            <!-- 1 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/home.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Home</span>
+            </div>
+            <!-- 2 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/wine.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Winery</span>
+            </div>
+            <!-- 3 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/task.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Orders</span>
+            </div>
+            <!-- 4 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/notes.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Notes</span>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

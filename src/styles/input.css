@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .active-ft span {
+    @apply font-semibold text-white;
+  }
+  .active-ft svg path {
+    fill: white !important;
+    stroke: white !important;
+    opacity: 1 !important;
+  }
+  .active-ft .footer-bar {
+    @apply opacity-100;
+  }
+  .footer-bar {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+}
+
+.shaper {
+  background: linear-gradient(180deg, #7168cd 0%, #786edb 100%);
+}
+
+.loginbox {
+  border: 1px solid #f6f5fa;
+  box-shadow: 4px 3px 32px rgba(204, 202, 223, 0.26);
+}
+.inputshadow {
+  box-shadow: 0px 2px 50px rgba(104, 96, 193, 0.07);
+}
+.loginbg {
+  background: linear-gradient(180deg, #5d55b2 0%, #746bd2 100%);
+}
+.whitetrans {
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #FFFFFF 117.86%);
+}
+.shadow-ma {
+  box-shadow: 4px 3px 32px rgba(204, 202, 223, 0.26);
+}
+.popupbg {
+  background: rgba(16, 16, 16, 0.3);
+  backdrop-filter: blur(1px);
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

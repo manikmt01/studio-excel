@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Client</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-work-sans bg-[#ffffff] relative h-screen">
+    <!-- Desktop Sidebar -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[250px] bg-white border-r border-[#F6F5FA] hidden lg:flex flex-col z-[60]">
+        <!-- Logo -->
+        <div class="h-[100px] flex items-center justify-center border-b border-[#F6F5FA]">
+            <h1 class="text-[24px] font-bold text-[#5D55B2]">StudioExcel</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 overflow-y-auto py-[20px] px-[16px] flex flex-col gap-[8px]">
+            <!-- Home -->
+            <a href="dashboard.html"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] bg-[#F6F5FA] rounded-[12px] text-[#5D55B2]">
+                <img src="./images/home.svg" alt="home" class="h-[20px] w-auto filter-purple">
+                <span class="text-[16px] font-medium">Home</span>
+            </a>
+            <!-- Winery -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/wine.svg" alt="winery"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Winery</span>
+            </a>
+            <!-- Orders -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/task.svg" alt="orders"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Orders</span>
+            </a>
+            <!-- Notes -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/notes.svg" alt="notes"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Notes</span>
+            </a>
+        </nav>
+
+        <!-- User Profile (Bottom) -->
+        <div class="p-[16px] border-t border-[#F6F5FA]">
+            <div class="flex items-center gap-[12px]">
+                <img src="https://i.pravatar.cc/100?img=1" alt="avatar" class="w-[40px] h-[40px] rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-[14px] font-semibold text-[#1F1F1F]">Alex Joy</span>
+                    <span class="text-[12px] text-[#545454]">Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- navbar (removable) -->
+    <!-- main content -->
+    <main class="">
+        <!-- top bar -->
+        <section
+            class="px-[20px] fixed top-0 pt-[26px] w-full lg:w-[calc(100%-250px)] lg:left-[250px] z-10 bg-white pb-[20px] transition-all">
+            <!-- 1 -->
+            <div class="flex flex-row items-center justify-between">
+                <!-- left -->
+                <div class="flex flex-row items-center gap-[12px]">
+                    <button
+                        class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.77254 5.43579L3.20837 11L8.77254 16.5641" stroke="#292D32" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.7916 11H3.36414" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h2 class="text-[18px] md:text-[24px] text-[#000000] font-medium transition-all">Select Client</h2>
+                </div>
+                <!-- right -->
+                <button
+                    class="w-[44px] h-[44px] rounded-full loginbg flex justify-center items-center shadow-[0px_10px_30px_rgba(93,85,178,0.3)]">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 15H22.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M15 22.5V7.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <!-- 2 -->
+            <div class="grid grid-cols-4 gap-[10px] lg:gap-[20px] mt-[20px]">
+                <span class="block w-full h-[6px] rounded-[60px] bg-[#111526]"></span>
+                <span class="block w-full h-[6px] rounded-[60px] bg-[#ECECEC]"></span>
+                <span class="block w-full h-[6px] rounded-[60px] bg-[#ECECEC]"></span>
+                <span class="block w-full h-[6px] rounded-[60px] bg-[#ECECEC]"></span>
+            </div>
+            <!-- Search -->
+            <div class="mt-[20px] relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-[16px] pointer-events-none">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.58329 17.5001C13.9555 17.5001 17.5 13.9557 17.5 9.58341C17.5 5.21116 13.9555 1.66675 9.58329 1.66675C5.21104 1.66675 1.66663 5.21116 1.66663 9.58341C1.66663 13.9557 5.21104 17.5001 9.58329 17.5001Z"
+                            stroke="#AEA9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18.3333 18.3334L16.6666 16.6667" stroke="#AEA9D9" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+                <input type="text"
+                    class="block w-full h-[50px] ps-[50px] text-[14px] text-[#111526] border border-[#E2E2E2] rounded-[30px] bg-white inputshadow outline-none placeholder:text-[#545454] placeholder:text-[14px] font-medium"
+                    placeholder="Find client" />
+            </div>
+        </section>
+
+        <!-- List -->
+        <section
+            class="pt-[190px] px-[20px] pb-[200px] overflow-y-auto no-scrollbar h-screen bg-white lg:pl-[270px] transition-all relative">
+            <div class="flex flex-col gap-[14px] pe-[16px]">
+                <!-- Item 1 -->
+                <div
+                    class="p-[16px] rounded-[16px] loginbox bg-[#F6F5FA] transition-all hover:bg-[#eae9f5] cursor-pointer">
+                    <h3 id="letter-A"
+                        class="text-[14px] md:text-[16px] font-semibold text-[#000000] mb-[12px] transition-all">
+                        Albariño Fruit Winery</h3>
+                    <div class="flex flex-row items-center gap-[3px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00003 10.0726C10.2924 10.0726 11.34 9.02492 11.34 7.73258C11.34 6.44023 10.2924 5.39258 9.00003 5.39258C7.70769 5.39258 6.66003 6.44023 6.66003 7.73258C6.66003 9.02492 7.70769 10.0726 9.00003 10.0726Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                            <path
+                                d="M2.71503 6.3675C4.19253 -0.127498 13.815 -0.119998 15.285 6.375C16.1475 10.185 13.7775 13.41 11.7 15.405C10.1925 16.86 7.80753 16.86 6.29253 15.405C4.22253 13.41 1.85253 10.1775 2.71503 6.3675Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                        </svg>
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">620
+                            Sumac Road<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>Cawton
+                            BC</span>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                    class="p-[16px] rounded-[16px] loginbox bg-[#F6F5FA] transition-all hover:bg-[#eae9f5] cursor-pointer">
+                    <h3 id="letter-B"
+                        class="text-[14px] md:text-[16px] font-semibold text-[#000000] mb-[12px] transition-all">
+                        Barbera Fruit Winery
+                    </h3>
+                    <div class="flex flex-row items-center gap-[3px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00003 10.0726C10.2924 10.0726 11.34 9.02492 11.34 7.73258C11.34 6.44023 10.2924 5.39258 9.00003 5.39258C7.70769 5.39258 6.66003 6.44023 6.66003 7.73258C6.66003 9.02492 7.70769 10.0726 9.00003 10.0726Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                            <path
+                                d="M2.71503 6.3675C4.19253 -0.127498 13.815 -0.119998 15.285 6.375C16.1475 10.185 13.7775 13.41 11.7 15.405C10.1925 16.86 7.80753 16.86 6.29253 15.405C4.22253 13.41 1.85253 10.1775 2.71503 6.3675Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                        </svg>
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">620
+                            Sumac Road<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>Cawton
+                            BC</span>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div
+                    class="p-[16px] rounded-[16px] loginbox bg-[#F6F5FA] transition-all hover:bg-[#eae9f5] cursor-pointer">
+                    <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] mb-[12px] transition-all">
+                        Brunello di Montalcino</h3>
+                    <div class="flex flex-row items-center gap-[3px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00003 10.0726C10.2924 10.0726 11.34 9.02492 11.34 7.73258C11.34 6.44023 10.2924 5.39258 9.00003 5.39258C7.70769 5.39258 6.66003 6.44023 6.66003 7.73258C6.66003 9.02492 7.70769 10.0726 9.00003 10.0726Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                            <path
+                                d="M2.71503 6.3675C4.19253 -0.127498 13.815 -0.119998 15.285 6.375C16.1475 10.185 13.7775 13.41 11.7 15.405C10.1925 16.86 7.80753 16.86 6.29253 15.405C4.22253 13.41 1.85253 10.1775 2.71503 6.3675Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                        </svg>
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">620
+                            Sumac Road<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>Cawton
+                            BC</span>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div
+                    class="p-[16px] rounded-[16px] loginbox bg-[#F6F5FA] transition-all hover:bg-[#eae9f5] cursor-pointer">
+                    <h3 id="letter-C"
+                        class="text-[14px] md:text-[16px] font-semibold text-[#000000] mb-[12px] transition-all">
+                        Cabernet Franc Fruit
+                        Winery</h3>
+                    <div class="flex flex-row items-center gap-[3px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00003 10.0726C10.2924 10.0726 11.34 9.02492 11.34 7.73258C11.34 6.44023 10.2924 5.39258 9.00003 5.39258C7.70769 5.39258 6.66003 6.44023 6.66003 7.73258C6.66003 9.02492 7.70769 10.0726 9.00003 10.0726Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                            <path
+                                d="M2.71503 6.3675C4.19253 -0.127498 13.815 -0.119998 15.285 6.375C16.1475 10.185 13.7775 13.41 11.7 15.405C10.1925 16.86 7.80753 16.86 6.29253 15.405C4.22253 13.41 1.85253 10.1775 2.71503 6.3675Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                        </svg>
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">620
+                            Sumac Road<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>Cawton
+                            BC</span>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div
+                    class="p-[16px] rounded-[16px] loginbox bg-[#F6F5FA] transition-all hover:bg-[#eae9f5] cursor-pointer">
+                    <h3 id="letter-D"
+                        class="text-[14px] md:text-[16px] font-semibold text-[#000000] mb-[12px] transition-all">
+                        Dolcetto Fruit Winery
+                    </h3>
+                    <div class="flex flex-row items-center gap-[3px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00003 10.0726C10.2924 10.0726 11.34 9.02492 11.34 7.73258C11.34 6.44023 10.2924 5.39258 9.00003 5.39258C7.70769 5.39258 6.66003 6.44023 6.66003 7.73258C6.66003 9.02492 7.70769 10.0726 9.00003 10.0726Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                            <path
+                                d="M2.71503 6.3675C4.19253 -0.127498 13.815 -0.119998 15.285 6.375C16.1475 10.185 13.7775 13.41 11.7 15.405C10.1925 16.86 7.80753 16.86 6.29253 15.405C4.22253 13.41 1.85253 10.1775 2.71503 6.3675Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                        </svg>
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">620
+                            Sumac Road<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>Cawton
+                            BC</span>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div
+                    class="p-[16px] rounded-[16px] loginbox bg-[#F6F5FA] transition-all hover:bg-[#eae9f5] cursor-pointer">
+                    <h3 id="letter-E"
+                        class="text-[14px] md:text-[16px] font-semibold text-[#000000] mb-[12px] transition-all">
+                        Ehrenfelser Fruit
+                        Winery</h3>
+                    <div class="flex flex-row items-center gap-[3px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00003 10.0726C10.2924 10.0726 11.34 9.02492 11.34 7.73258C11.34 6.44023 10.2924 5.39258 9.00003 5.39258C7.70769 5.39258 6.66003 6.44023 6.66003 7.73258C6.66003 9.02492 7.70769 10.0726 9.00003 10.0726Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                            <path
+                                d="M2.71503 6.3675C4.19253 -0.127498 13.815 -0.119998 15.285 6.375C16.1475 10.185 13.7775 13.41 11.7 15.405C10.1925 16.86 7.80753 16.86 6.29253 15.405C4.22253 13.41 1.85253 10.1775 2.71503 6.3675Z"
+                                stroke="#5D55B2" stroke-width="1.5" />
+                        </svg>
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">620
+                            Sumac Road<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>Cawton
+                            BC</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alphabet Sidebar -->
+            <aside
+                class="fixed right-[5px] top-[190px] bottom-[100px] flex flex-col justify-start overflow-y-auto no-scrollbar gap-[4px] items-center text-[10px] sm:text-[11px] md:text-[12px] xl:text-[14px] text-[#7B7B7B] font-medium z-50">
+                <a href="#letter-A"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">A</a>
+                <a href="#letter-B"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">B</a>
+                <a href="#letter-C"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">C</a>
+                <a href="#letter-D"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">D</a>
+                <a href="#letter-E"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">E</a>
+                <a href="#letter-F"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">F</a>
+                <a href="#letter-G"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">G</a>
+                <a href="#letter-H"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">H</a>
+                <a href="#letter-I"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">I</a>
+                <a href="#letter-J"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">J</a>
+                <a href="#letter-K"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">K</a>
+                <a href="#letter-L"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">L</a>
+                <a href="#letter-M"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">M</a>
+                <a href="#letter-N"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">N</a>
+                <a href="#letter-O"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">O</a>
+                <a href="#letter-P"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">P</a>
+                <a href="#letter-Q"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">Q</a>
+                <a href="#letter-R"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">R</a>
+                <a href="#letter-S"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">S</a>
+                <a href="#letter-T"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">T</a>
+                <a href="#letter-U"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">U</a>
+                <a href="#letter-V"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">V</a>
+                <a href="#letter-W"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">W</a>
+                <a href="#letter-X"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">X</a>
+                <a href="#letter-Y"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">Y</a>
+                <a href="#letter-Z"
+                    class="transition-all duration-300 hover:text-[#5D55B2] hover:scale-150 hover:font-bold">Z</a>
+            </aside>
+        </section>
+
+
+
+
+
+    </main>
+    <!-- footer -->
+    <footer class="absolute bottom-0 z-[99] w-full lg:hidden">
+        <div
+            class="min-h-[80px] bg-[#181C2A] rounded-t-[16px] flex flex-row items-center justify-between py-[18px] px-[30px]">
+            <!-- 1 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/home.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Home</span>
+            </div>
+            <!-- 2 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/wine.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Winery</span>
+            </div>
+            <!-- 3 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/task.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Orders</span>
+            </div>
+            <!-- 4 -->
+            <div class="flex flex-col items-center gap-[10px]">
+                <img src="./images/notes.svg" alt="home" class="h-[20px] w-full">
+                <span class="text-[12px] text-[#777D93] font-normal">Notes</span>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
